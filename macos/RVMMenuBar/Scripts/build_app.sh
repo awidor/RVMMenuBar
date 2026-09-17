@@ -16,6 +16,8 @@ mkdir -p "${APP_DIR}/Contents/Resources"
 
 cp "${PACKAGE_DIR}/.build/release/RVMMenuBar" "${APP_DIR}/Contents/MacOS/RVMMenuBar"
 xcrun coremlcompiler compile "${MODEL_PATH}" "${APP_DIR}/Contents/Resources"
+cp "${REPO_DIR}/LICENSE" "${APP_DIR}/Contents/Resources/LICENSE"
+cp "${REPO_DIR}/models/LICENSE" "${APP_DIR}/Contents/Resources/MODEL-LICENSE"
 
 cat > "${APP_DIR}/Contents/Info.plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
